@@ -10,6 +10,8 @@ df = pd.read_csv(r"C:\Users\HP\Downloads\iris.csv")
 print(df.info())
 print(df.describe())
 
+del df['species']  # Remove non-numeric column for correlation
+
 # Visualize Distribution
 sns.histplot(data=df, x="sepal_length", kde=True)
 plt.title("Distribution of Sepal Length")
